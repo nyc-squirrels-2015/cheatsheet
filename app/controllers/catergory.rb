@@ -17,3 +17,13 @@ post "/profile/:id/new_category" do
   return{name: @category.name}.to_json
 end
 
+get "/category/:id/delete" do
+  @category = Category.find(params[:id])
+  erb :delete_category
+end
+
+delete "/category/:id/delete" do
+  @category = Category.find(params[:id])
+  @category.destroy
+  redirect "profile/#{session[:id]}"
+end
