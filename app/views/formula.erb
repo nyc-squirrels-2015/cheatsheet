@@ -1,2 +1,8 @@
-<h3><%=@formula.name%></h3> Delete</a>
+<h3><%=@formula.name%></h3>
 <h6><%=@formula.content%></h6>
+<div id="delete_btn">
+  <form action="/formula/<%=@formula.id%>/delete" method="Post">
+    <input type="hidden" name="_method" value="Delete">
+    <input type="submit" Value="Delete">
+  </form>
+</div>

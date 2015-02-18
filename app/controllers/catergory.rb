@@ -5,7 +5,6 @@ get "/category/:id" do
 end
 
 get "/profile/:id/new_category" do
-  # content_type :json
   @user = User.find(params[:id])
   erb :category_form, layout: false
 end
@@ -17,3 +16,4 @@ post "/profile/:id/new_category" do
   content_type :json
   return{name: @category.name}.to_json
 end
+
