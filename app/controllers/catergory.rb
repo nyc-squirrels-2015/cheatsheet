@@ -13,8 +13,8 @@ post "/profile/:id/new_category" do
   @category = Category.create(name: params[:name], user_id: params[:id])
   @user=User.find(params[:id])
   # redirect "/profile/#{@user.id}"
-  # content_type :json
-  return{name: @category.name}.to_json
+  content_type :json
+  return@category.to_json
 end
 
 get "/category/:id/delete" do

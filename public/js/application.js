@@ -11,15 +11,16 @@ $(document).ready(function() {
     })
   })
 
-  $('#addcatdel #catform').on("submit", function(event){
+  $("body").on("submit", "#catform", function(event){
     event.preventDefault();
     var $form = $("#catform")
     $.ajax({
       type: $form.attr("method"),
       url: $form.attr("action"),
       data: $form.serialize(),
-      success: function(response){
-        $("ul").append("<li><a href='/category/<%=category.id%>'>" + response.name +"</a></li>")
+      success: function(response){console.log(response)
+        $("ul").append("<li><a href='/category/"+ response.id + "'>" + response.name +"</a></li>")
+        $("#catform").hide();
       }
 
     })
