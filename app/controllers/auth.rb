@@ -7,11 +7,11 @@ get '/login' do
 end
 
 post '/login' do
-  user = User.find_by(username: params[:username])
+  @user = User.find_by(username: params[:username])
 
-  if user.try(:authenticate, params[:password])
-    session[:id] = user.id
-    redirect "/profile/#{user.id}"
+  if @user.try(:authenticate, params[:password])
+    session[:id] = @user.id
+    redirect "/profile/#{@user.id}"
   else
   redirect "/login"
   end
