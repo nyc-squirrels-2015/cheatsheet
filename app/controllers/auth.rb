@@ -3,9 +3,21 @@ get '/' do
 end
 
 get '/login' do
-  
+  erb :'auth/login'
 end
 
-get '/signup' do
-  
+post '/login' do
+  user = User.find_by(username:params[:user])
+
+  if user.try(:authenticate, params[:password])
+    session[:id] = user.id
+    redirect '/profile#{user.id}'
+  else
+    redirect '/login'
+  end
+end
+
+get '/logout' do
+  session.clear
+  redirect ' /'
 end
