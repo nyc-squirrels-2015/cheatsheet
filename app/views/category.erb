@@ -1,0 +1,9 @@
+<ul>
+<%=@category.name%>:
+<% @category.formulas.each do |formula| %>
+<li> <%=formula.name %></li>
+  <ul>
+    <li><%=formula.content%></li>
+    </ul>
+<% end%>
+</ul>

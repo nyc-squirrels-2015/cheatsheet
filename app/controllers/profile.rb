@@ -3,6 +3,3 @@ get '/profile/:id' do
   erb :profile
 end
 
-get '/category/:id' do
-  @category = Category.find(params[:id])
-end
