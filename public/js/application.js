@@ -1,7 +1,15 @@
 $(document).ready(function() {
+  $( "li" ).hover(
+    function() {
+    $(this).append( $( "<span>!!!! Must ready</span>" ) );
+  }, function() {
+    $(this).find( "span:last" ).remove();
+  }
+);
+
   $('#add_cat').on("click", function(event){
     event.preventDefault();
-    var $click = $(this)
+    var $click = $(event.target)
     console.log($click.attr("href"))
     $.ajax({
       type: "GET",

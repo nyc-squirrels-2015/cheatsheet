@@ -1,11 +1,11 @@
 <ul>
-<%=@category.name%>:
-<a href='/category/<%=@category.id%>/new_formula'>Add formula</a>
-<% @category.formulas.each do |formula| %>
-<li id="category_id"> <a href="/formula/<%=formula.id%>"><%=formula.name %></a> </li>
-  <ul>
-    <li><%=formula.content%></li>
+  <%=@category.name%>:
+  <a href='/category/<%=@category.id%>/new_formula'>Add formula</a>
+    <% @category.formulas.each do |formula| %>
+  <li id="category_id"> <a href="/formula/<%=formula.id%>"><%=formula.name %></a> </li>
+    <ul>
+      <li><%=formula.content%></li>
     </ul>
-<% end%>
+  <% end%>
 </ul>
 <a href="/category/<%=@category.id%>/delete">Delete Category</a>
