@@ -24,3 +24,14 @@ get "/formula/:id" do
   @formula = Formula.find(params[:id])
   erb :formula
 end
+
+get "/formula/:id/update" do
+  @formula = Formula.find(params[:id])
+  erb :update_formula
+end
+
+put "/formula/:id/update" do
+  @formula = Formula.find(params[:id])
+  Formula.update(params[:id], {name: params[:name], content: params[:content]})
+  redirect "/formula/#{@formula.id}"
+end
