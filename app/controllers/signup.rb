@@ -1,13 +1,13 @@
-get '/signup' do
+get "/signup" do
   erb :'auth/signup'
 end
 
-post '/signup' do
+post "/signup" do
   @user = User.create(username: params[:username], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   if @user.save
     session[:id] = @user.id
-    redirect '/profile/#{user.id}'
+    redirect "/profile/#{@user.id}"
   else
-    redirect '/login'
+    redirect "/login"
   end
 end

@@ -2,11 +2,11 @@ get '/' do
   erb :welcome
 end
 
-get '/login' do
+get "/login" do
   erb :'auth/login'
 end
 
-post '/login' do
+post "/login" do
   @user = User.find_by(username: params[:username])
 
   if @user.try(:authenticate, params[:password])
@@ -17,7 +17,7 @@ post '/login' do
   end
 end
 
-get '/logout' do
+get "/logout" do
   session.clear
-  redirect ' /'
+  redirect '/'
 end
