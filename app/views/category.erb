@@ -1,7 +1,7 @@
 <ul>
 <%=@category.name%>:
 <% @category.formulas.each do |formula| %>
-<li> <a href="/formula/<%=formula.id%>"><%=formula.name %></a> </li>
+<li id="category_id"> <a href="/formula/<%=formula.id%>"><%=formula.name %></a> </li>
   <ul>
     <li><%=formula.content%></li>
     </ul>

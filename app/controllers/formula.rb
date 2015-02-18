@@ -17,6 +17,7 @@ end
 delete "/formula/:id/delete" do
   @formula = Formula.find(params[:id])
   @formula.destroy
+  redirect "category/#{@category.id}"
 end
 
 get "/formula/:id" do

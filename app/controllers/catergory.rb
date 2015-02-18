@@ -5,12 +5,15 @@ get "/category/:id" do
 end
 
 get "/profile/:id/new_category" do
+  # content_type :json
   @user = User.find(params[:id])
-  erb :category_form
+  erb :category_form, layout: false
 end
 
 post "/profile/:id/new_category" do
-  Category.create(name: params[:name], user_id: params[:id])
+  @category = Category.create(name: params[:name], user_id: params[:id])
   @user=User.find(params[:id])
-  redirect "/profile/#{@user.id}"
+  # redirect "/profile/#{@user.id}"
+  content_type :json
+  return{name: @category.name}.to_json
 end
