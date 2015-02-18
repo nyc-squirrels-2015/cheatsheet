@@ -1,5 +1,8 @@
 <h3><%=@user.username %></h3>
-  <a id="add_cat"href="/profile/<%= @user.id%>/new_category">Add New Category</a><br>
+<div id="addcatdel">
+  <a id="add_cat"href="/profile/<%= @user.id%>/new_category">Add New Category</a>
+</div>
+  <br>
 <ul>
 Category:
 <% @user.categories.each do |category| %>
