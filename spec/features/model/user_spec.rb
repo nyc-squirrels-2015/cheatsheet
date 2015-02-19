@@ -13,7 +13,7 @@ class UserSpec
     end
 
     it 'should respond to category' do
-      expect(user.category.first).to be_a Category
+      expect(user.categories.first).to be_a Category
     end
   end
 end

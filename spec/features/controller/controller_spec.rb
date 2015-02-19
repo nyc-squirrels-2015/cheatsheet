@@ -13,5 +13,6 @@ class RoutesSpec
     expect(last_response).to be_ok
     expect(last_response.body).to include 'login'
   end
+
   end
 end

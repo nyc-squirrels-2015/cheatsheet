@@ -1,11 +1,4 @@
 $(document).ready(function() {
-  $( "li" ).hover(
-    function() {
-    $(this).append( $( "<span>!!!! Must ready</span>" ) );
-  }, function() {
-    $(this).find( "span:last" ).remove();
-  }
-);
 
   $('#add_cat').on("click", function(event){
     event.preventDefault();
@@ -36,3 +29,4 @@ $(document).ready(function() {
   })
 
 });
+
