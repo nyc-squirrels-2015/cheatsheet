@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   has_many :formulas
 
   def self.authenticate(username, password)
-    auth = User.find_by(username: username).try(:authenticate, password)
-    auth
+    User.find_by(username: username).try(:authenticate, password)
   end
 end
