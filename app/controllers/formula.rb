@@ -17,7 +17,7 @@ delete "/formula/:id/delete" do
   @category = Formula.find_by_category_id(params[:id])
   @formula = Formula.find(params[:id])
   @formula.destroy
-  redirect "category/#{@category.id}"
+  redirect "profile/#{session[:id]}"
 end
 
 get "/formula/:id" do

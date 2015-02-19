@@ -26,3 +26,4 @@ delete "/category/:id/delete" do
   @category.destroy
   redirect "profile/#{session[:id]}"
 end
+

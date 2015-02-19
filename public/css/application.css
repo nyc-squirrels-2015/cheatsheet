@@ -1,12 +1,12 @@
 /* CSS declarations go here */
 body {font-family: arial; font-size: 160%; line-height: 160%; }
-h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin:auto; color:pink; font-style: italic; font-weight: 400;}
-h1 {font-size: 1.6em;}
-h2 {font-size: 1.4em;}
-h3 {font-size: 1.2em;}
-h4 {font-size: 1em;}
-h5 {font-size: .8em;}
-h6 {font-size: 6em;}
+h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin:auto; color:blue; font-style: italic; font-weight: 400;}
+h1 {font-size: 1.4em;}
+h2 {font-size: 1.2em;}
+h3 {font-size: 1.0em;}
+h4 {font-size: .8em;}
+h5 {font-size: .6em;}
+h6 {font-size: .4em;}
 p, pre, blockquote, table, ul, ol, dl {margin-top: .5em; margin-bottom: .5em;}
 ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em; margin-bottom: 0.5em;}
 li {margin: 0.3em auto;}
@@ -70,12 +70,20 @@ code {
 }
 form input {
     font-family: arial;
-    font-size: 30%;
+    font-size: 50%;
+}
+
+header {
+
 }
 
 body{
-    background-color: lightblue;
+    background-image: url(http://www.zingerbug.com/Backgrounds/background_images/light_green_bamboo_wallpaper_tileable.jpg);
 }
 ul li {
     list-style-type: none;
+}
+.cheater{
+     width: 600px;
+     margin: 0 auto;
 }

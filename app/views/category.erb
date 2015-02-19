@@ -1,5 +1,5 @@
 <ul>
-  <%=@category.name%>:
+  <%=@category.name%>: <br>
   <a href='/category/<%=@category.id%>/new_formula'>Add formula</a>
     <% @category.formulas.each do |formula| %>
   <li id="category_id"> <a href="/formula/<%=formula.id%>"><%=formula.name %></a> </li>
